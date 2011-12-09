@@ -18,3 +18,20 @@
 <% else %>
   No trips yet.
 <% end %>
+
+<% unless @trip.nil? %>
+  <form class="form-stacked" method="post">
+    <fieldset>
+      <div class="clearfix">
+        <label for="amount_for_trip_<%=@trip.id%>">Make bid for trip to <%= @trip.name %></label>
+        <div class="input">
+          <input type="number" class="xlarge" id="bid" name="bid">
+          <input type="hidden" id="trip_id" name="trip_id" value="<%= @trip.id %>">
+        </div>
+      </div>
+    </fieldset>
+    <div class="actions">
+      <button class="btn primary" type="submit" id="place_bid">Place bid</button>
+    </div>
+  </form>
+<% end %>

@@ -6,6 +6,7 @@ class App < Sinatra::Base
   
   get "/" do
     @trips = Auction.trips
+    @trip = Auction.trip(params[:trip_id]) if params[:trip_id]
     erb :home
   end
 end
