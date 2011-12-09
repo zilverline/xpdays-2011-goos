@@ -14,6 +14,7 @@ class App < Sinatra::Base
     trip = Auction.trip(params[:trip_id])
     bid = params[:bid]
     Auction.place_bid(trip, bid)
+    redirect "/"
   end
   
 end
