@@ -15,7 +15,12 @@ class App < Sinatra::Base
     trip = Auction.trip(params[:trip_id])
     bid = params[:bid]
     Auction.place_bid(trip, bid)
-    redirect "/"
+    
+    if request.env["HTTP_X_REQUESTED_WITH"].nil?
+      redirect "/"
+    else
+      "{\"trip_id\": #{trip.id}, \"amount_for_trip\": #{bid}}"
+    end
   end
   
 end
