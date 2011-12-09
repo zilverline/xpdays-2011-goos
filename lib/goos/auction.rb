@@ -13,6 +13,7 @@ module Auction
   end
   
   def place_bid(trip, bid)
+    sleep rand(3)
     @bids ||= {}
     @bids[trip.id] = bid
   end
