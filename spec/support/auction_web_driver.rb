@@ -2,6 +2,8 @@ class AuctionWebDriver
   include Capybara::DSL
   
   def start
+    Capybara.app = App
+    Capybara.default_driver = :selenium
   end
   
   def stop
