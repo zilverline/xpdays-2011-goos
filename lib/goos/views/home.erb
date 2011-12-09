@@ -1,0 +1,20 @@
+<% unless @trips.nil? %>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Bid</th>
+      </tr>
+    </thead>
+    <tbody>
+    <% @trips.each do |trip| %>
+      <tr>
+        <td><a id="<%= "select_trip_#{trip.id}" %>" href="/?trip_id=<%= trip.id %>"><%= trip.name %></a></td>
+        <td id="<%= "trip_bid_#{trip.id}"%>"></td>
+      </tr>
+    <% end %>
+    </tbody>
+  </table>
+<% else %>
+  No trips yet.
+<% end %>
