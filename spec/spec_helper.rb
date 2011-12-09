@@ -1,5 +1,8 @@
 require File.expand_path('../../lib/goos', __FILE__)
 
+require "capybara"
+require "capybara/dsl"
+
 Dir["**/support/**/*.rb"].each {|f| require_relative "../#{f}"}
 
 RSpec.configure do |config|

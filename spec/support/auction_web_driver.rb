@@ -1,4 +1,5 @@
 class AuctionWebDriver
+  include Capybara::DSL
   
   def start
   end
