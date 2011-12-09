@@ -2,6 +2,7 @@ require File.expand_path('../../lib/goos', __FILE__)
 
 require "capybara"
 require "capybara/dsl"
+require "mocha"
 
 Dir["**/support/**/*.rb"].each {|f| require_relative "../#{f}"}
 
