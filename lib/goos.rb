@@ -1,0 +1,1 @@
+require File.expand_path('../goos/trip', __FILE__)
