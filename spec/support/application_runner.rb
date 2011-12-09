@@ -16,4 +16,8 @@ class ApplicationRunner
   def place_bid(trip, bid)
     auction_driver.place_bid(trip, bid)
   end
+  
+  def bid_for(trip)
+    auction_driver.bid_for(trip)
+  end
 end

@@ -15,4 +15,8 @@ class AuctionWebDriver
     fill_in "bid", :with => bid
     click_on "place_bid"
   end
+  
+  def bid_for(trip)
+    find("#trip_bid_#{trip.id}").text.to_i
+  end
 end
